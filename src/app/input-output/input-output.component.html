@@ -1,0 +1,9 @@
+<label>
+    Number:
+    <input #newNum type="text" [value]="num">
+</label>
+
+
+<p>
+    <button (click)="changeTheValue(newNum.value)">Update Number</button>
+</p>

@@ -1,0 +1,22 @@
+<h2>Display / Refresh Data </h2>
+
+<p *ngIf="topMessage">{{topMessage.data.children[0].data.title}}
+    {{topMessage.data.children[0].data.thumbnail}}</p>
+
+<button (click)="refleshTopMessage()"> Refresh</button>
+<br>
+<br>
+<button (click)="getMostPopular()"> Fetch Most Popular </button>
+<br>
+<br>
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Icon</th>
+    </tr>
+    <tr *ngFor="let item of mostPopular">
+        <th>{{item.data.name}}</th>
+        <th><img src="{{item.data.icon_img}}"></th>
+    </tr>
+
+</table>
