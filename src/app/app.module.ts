@@ -8,11 +8,13 @@ import { InputOutputComponent } from './input-output/input-output.component';
 import { FetchDataService } from './fetch-data.service';
 import { DisplayRefreshComponent } from './display-refresh/display-refresh.component';
 import { ParentComponent } from './parent/parent.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule,],
-  declarations: [AppComponent, DisplaySentenceComponent, InputOutputComponent, DisplayRefreshComponent, ParentComponent],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  declarations: [AppComponent, DisplaySentenceComponent, InputOutputComponent, DisplayRefreshComponent, ParentComponent, DashboardComponent],
   bootstrap: [AppComponent],
   providers: [FetchDataService]
 })
